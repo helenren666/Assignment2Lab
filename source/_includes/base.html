@@ -1,10 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>{{ title }}</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+
+  <!-- 通用样式 -->
+  <link rel="stylesheet" href="/css/base.css">
+
+  <!-- 页面专属样式（条件加载） -->
+  {% if page.fileSlug == "index" %}
+    <link rel="stylesheet" href="/css/index.css">
+  {% endif %}
+
+  {% if layout == "song.html" %}
+    <link rel="stylesheet" href="/css/song.css">
+  {% endif %}
+</head>
+
+<body>
+  <main>
     {{ content }}
-  </body>
+  </main>
+</body>
 </html>

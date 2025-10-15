@@ -1,0 +1,116 @@
+/* ❤️‍🔥 After Hours Deep Red Song Page Styling */
+
+body {
+  background: radial-gradient(circle at top, #0a0002 0%, #000 100%);
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  color: #e3e3e3;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Song Container === */
+.song {
+  max-width: 720px;
+  margin: 4rem auto;
+  background: linear-gradient(180deg, rgba(25, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.95) 100%);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(80, 0, 0, 0.4);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* === Photo === */
+.song-photo {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto 2rem;
+  border-radius: 12px;
+  border: 3px solid rgba(120, 0, 0, 0.6);
+  box-shadow: 0 0 25px rgba(100, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.song-photo:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(255, 20, 20, 0.4);
+  filter: brightness(1.1);
+}
+
+/* === Info Section === */
+.song-info {
+  margin-bottom: 1.5rem;
+}
+
+.song-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #fff; /* ✅ 保留亮色标题 */
+  letter-spacing: 0.6px;
+  text-shadow: 0 0 6px rgba(75, 65, 184, 0.6); /* ✅ 保留原来的光效 */
+}
+
+.song-featuring {
+  font-size: 1rem;
+  color: #b5b5b5;
+  margin: 0.2rem 0 0.5rem;
+}
+
+.song-year {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* === Listen Button === */
+.song-listen {
+  display: inline-block;
+  margin-top: 1.4rem;
+  padding: 0.6rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, #5e0000 0%, #240000 100%);
+  box-shadow: 0 0 15px rgba(100, 0, 0, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+}
+
+.song-listen:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, #a30000 0%, #300000 100%);
+  box-shadow: 0 0 35px rgba(255, 30, 30, 0.6);
+}
+
+/* === Content Text === */
+.song-content {
+  text-align: left;
+  line-height: 1.8;
+  color: #d5d5d5;
+  margin-top: 2.5rem;
+  padding: 0 1rem;
+}
+
+.song-content p {
+  margin-bottom: 1.2rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .song {
+    padding: 1.8rem;
+  }
+
+  .song-title {
+    font-size: 1.6rem;
+  }
+
+  .song-listen {
+    padding: 0.5rem 1.2rem;
+  }
+}
+

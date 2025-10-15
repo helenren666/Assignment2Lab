@@ -1,9 +1,37 @@
 ---
-title: Assignment 2 Template
+layout: base.html
+title: The Weeknd Song Collection
 ---
-<h1>Assignment 2 Template</h1>
 
-<p>
-  This is a main page for your collection site. You can edit
-  its contents and add new pages to this folder.
-</p>
+<h1 class="page-title">🎧 The Weeknd Collection</h1>
+
+<div class="filter-bar">
+  <label for="filter-select">Filter by Type:</label>
+  <select id="filter-select" class="filter-select">
+    <option value="all">All</option>
+    <option value="solo">Solo</option>
+    <option value="collaboration">Collaboration</option>
+  </select>
+</div>
+
+<section class="song-grid">
+  {% for song in collections.songs %}
+  <div class="song-card" data-type="{{ song.data.type }}">
+    <a href="{{ song.url }}" class="song-link">
+      <img src="{{ song.data.photo }}" alt="{{ song.data.title }}" class="song-cover">
+    </a>
+    <div class="song-info">
+      <h2 class="song-title">
+        <a href="{{ song.url }}" class="song-link">{{ song.data.title }}</a>
+      </h2>
+      {% if song.data.featuring %}
+        <p class="song-featuring">ft. {{ song.data.featuring }}</p>
+      {% endif %}
+      <a href="{{ song.url }}" class="song-listen">View Details</a>
+    </div>
+  </div>
+{% endfor %}
+
+</section>
+<script src="/js/filter.js"></script>
+

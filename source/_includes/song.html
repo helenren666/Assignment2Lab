@@ -1,0 +1,26 @@
+---
+layout: base.html
+---
+
+<article class="song">
+  <img src="{{ photo }}" alt="{{ title }}" class="song-photo">
+
+  <div class="song-info">
+    <h1 class="song-title">{{ title }}</h1>
+    {% if featuring %}
+      <p class="song-featuring">ft. {{ featuring }}</p>
+    {% endif %}
+    <p class="song-year">{{ year }}</p>
+
+    {% if youtube %}
+      <a href="{{ youtube }}" target="_blank" class="song-listen">🎧 Listen on YouTube</a>
+    {% endif %}
+  </div>
+
+  <div class="song-content">
+    {{ content }}
+  </div>
+</article>
+
+
+
